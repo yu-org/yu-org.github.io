@@ -33,21 +33,17 @@ export default function ZhHome() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 pb-16 md:pt-32 md:pb-24">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border/40 bg-secondary/50 text-sm text-muted-foreground">
-            <Rocket className="w-4 h-4" />
-            被 L2 构建者信赖
-          </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-            构建定制化区块链
+            像开发 Web Service 一样
             <br />
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              真正能上线的那种
+              构建定制化区块链
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            高度可定制的区块链框架。模块化架构，EVM 兼容，生产就绪。
+            高度可定制的区块链框架。模块化架构，极易上手，生产就绪。
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
@@ -69,8 +65,11 @@ export default function ZhHome() {
 }
 
 func (e *Example) Transfer(ctx *context.WriteContext) error {
-  ctx.SetLei(100)  // 设置 Gas 消耗
+  // 设置 Gas 消耗
+  ctx.SetLei(100)  
+  // 设置状态
   e.Set([]byte("key"), []byte("value"))
+  // 触发事件
   ctx.EmitStringEvent("转账完成")
   return nil
 }
@@ -98,7 +97,7 @@ func main() {
             <FeatureCard
               icon={<Code2 className="w-8 h-8" />}
               title="业务逻辑层"
-              description="定义 Writing（状态变更）和 Reading（查询），通过简单的函数签名实现。如同智能合约，但原生内置。"
+              description="通过简单的函数定义 Writing（状态变更）和 Reading（查询）。如同智能合约，但原生内置。"
             />
             <FeatureCard
               icon={<Puzzle className="w-8 h-8" />}
@@ -108,35 +107,38 @@ func main() {
             <FeatureCard
               icon={<Boxes className="w-8 h-8" />}
               title="核心组件层"
-              description="更换区块结构、存储后端（Pebble/TiKV/SQL）和状态数据库。完全掌控。"
+              description="调用区块结构、P2P 网络、交易池、存储后端和状态数据库。完全掌控。"
             />
           </div>
         </div>
       </section>
 
-      {/* Key Features Grid */}
+      {/* 常用用法 */}
       <section className="container mx-auto px-4 py-16 md:py-24 bg-secondary/20">
         <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">常用用法</h2>
+          </div>
           <div className="grid md:grid-cols-2 gap-8">
             <FeatureItem
-              icon={<Zap className="w-6 h-6" />}
-              title="EVM 兼容"
-              description="完整的以太坊兼容性。部署 Solidity 合约，使用 MetaMask，支持 Uniswap V2。"
-            />
-            <FeatureItem
-              icon={<Shield className="w-6 h-6" />}
-              title="生产就绪"
-              description="被 Reddio（L2 基础设施）和 AWresearch（Web3 游戏）采用。久经考验。"
+              icon={<Code2 className="w-6 h-6" />}
+              title="多种VM兼容"
+              description="比如EVM，wasm，risc-v 兼容"
             />
             <FeatureItem
               icon={<Puzzle className="w-6 h-6" />}
-              title="鼎式架构"
-              description="基于插件的系统。自由组合组件。一切皆为鼎（Tripod）。"
+              title="共识定制"
+              description="可定制POA，POW以及其他共识协议"
             />
             <FeatureItem
               icon={<Boxes className="w-6 h-6" />}
-              title="灵活存储"
-              description="多种后端支持：Pebble、BoltDB、TiKV、MySQL、PostgreSQL、SQLite。"
+              title="账户定制"
+              description="可定制UTXO，银行式账户模型，以及其他定制化的账户抽象"
+            />
+            <FeatureItem
+              icon={<Zap className="w-6 h-6" />}
+              title="RPC兼容"
+              description="可兼容web3js以及其他多种web3 RPC协议"
             />
           </div>
         </div>

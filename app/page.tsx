@@ -113,29 +113,32 @@ func main() {
         </div>
       </section>
 
-      {/* Key Features Grid */}
+      {/* Common Use Cases */}
       <section className="container mx-auto px-4 py-16 md:py-24 bg-secondary/20">
         <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Common Use Cases</h2>
+          </div>
           <div className="grid md:grid-cols-2 gap-8">
             <FeatureItem
-              icon={<Zap className="w-6 h-6" />}
-              title="Multi-VMs Compatible"
-              description="Can be Full Ethereum compatibility or other VMs. Deploy Solidity contracts, use MetaMask, support Uniswap V2."
-            />
-            <FeatureItem
-              icon={<Shield className="w-6 h-6" />}
-              title="Production Ready"
-              description="Used by Reddio (L2 infrastructure) and AWresearch (Web3 gaming). Battle-tested."
+              icon={<Code2 className="w-6 h-6" />}
+              title="Multi-VM Compatible"
+              description="Compatible with EVM, WASM, RISC-V and more"
             />
             <FeatureItem
               icon={<Puzzle className="w-6 h-6" />}
-              title="Tripod Architecture"
-              description="Module-based system. Mix and match components. Everything is a Tripod."
+              title="Consensus Customization"
+              description="Customize POA, POW and other consensus protocols"
             />
             <FeatureItem
               icon={<Boxes className="w-6 h-6" />}
-              title="Flexible Storage"
-              description="Multiple backends: Pebble, BoltDB, TiKV, MySQL, PostgreSQL, SQLite."
+              title="Account Customization"
+              description="Customize UTXO, bank-style account models, and other customized account abstractions"
+            />
+            <FeatureItem
+              icon={<Zap className="w-6 h-6" />}
+              title="RPC Compatible"
+              description="Compatible with web3js and other web3 RPC protocols"
             />
           </div>
         </div>
