@@ -35,7 +35,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center space-y-8">
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-            Build Custom Blockchains
+            Build Custom Blockchain
             <br />
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Like Web Service
@@ -107,7 +107,7 @@ func main() {
             <FeatureCard
               icon={<Boxes className="w-8 h-8" />}
               title="Core Components"
-              description="Swap block structures, P2P network, Txpool, storage backends (Pebble/TiKV/SQL), and state databases. Full control."
+              description="Invoke block structures, P2P network, Txpool, storage backends, and state databases. Full control."
             />
           </div>
         </div>
