@@ -33,21 +33,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 pb-16 md:pt-32 md:pb-24">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border/40 bg-secondary/50 text-sm text-muted-foreground">
-            <Rocket className="w-4 h-4" />
-            Trusted by L2 builders
-          </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
             Build Custom Blockchains
             <br />
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              That Actually Ship
+              Like Web Service
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            A highly customizable blockchain framework. Modular architecture, EVM compatible, production-ready.
+            A highly customizable blockchain framework. Modular architecture, very Easy-to-use, production-ready.  
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
@@ -69,8 +65,11 @@ export default function Home() {
 }
 
 func (e *Example) Transfer(ctx *context.WriteContext) error {
-  ctx.SetLei(100)  // Set gas cost
+  // Set gas cost
+  ctx.SetLei(100)  
+  // Set State
   e.Set([]byte("key"), []byte("value"))
+  // Emit Event
   ctx.EmitStringEvent("Transfer completed")
   return nil
 }
@@ -98,7 +97,7 @@ func main() {
             <FeatureCard
               icon={<Code2 className="w-8 h-8" />}
               title="Business Logic"
-              description="Define Writings (state changes) and Readings (queries) with simple function signatures. Like smart contracts, but native."
+              description="Define Writings (state changes) and Readings (queries) with simple function. Like smart contracts, but native."
             />
             <FeatureCard
               icon={<Puzzle className="w-8 h-8" />}
@@ -108,7 +107,7 @@ func main() {
             <FeatureCard
               icon={<Boxes className="w-8 h-8" />}
               title="Core Components"
-              description="Swap block structures, storage backends (Pebble/TiKV/SQL), and state databases. Full control."
+              description="Swap block structures, P2P network, Txpool, storage backends (Pebble/TiKV/SQL), and state databases. Full control."
             />
           </div>
         </div>
@@ -120,8 +119,8 @@ func main() {
           <div className="grid md:grid-cols-2 gap-8">
             <FeatureItem
               icon={<Zap className="w-6 h-6" />}
-              title="EVM Compatible"
-              description="Full Ethereum compatibility. Deploy Solidity contracts, use MetaMask, support Uniswap V2."
+              title="Multi-VMs Compatible"
+              description="Can be Full Ethereum compatibility or other VMs. Deploy Solidity contracts, use MetaMask, support Uniswap V2."
             />
             <FeatureItem
               icon={<Shield className="w-6 h-6" />}
@@ -131,7 +130,7 @@ func main() {
             <FeatureItem
               icon={<Puzzle className="w-6 h-6" />}
               title="Tripod Architecture"
-              description="Plugin-based system. Mix and match components. Everything is a Tripod."
+              description="Module-based system. Mix and match components. Everything is a Tripod."
             />
             <FeatureItem
               icon={<Boxes className="w-6 h-6" />}
