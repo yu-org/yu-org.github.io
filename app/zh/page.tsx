@@ -43,7 +43,7 @@ export default function ZhHome() {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            高度可定制的区块链框架。模块化架构，极易上手，生产就绪。
+            高度可定制的区块链框架。模块化架构，极易上手，生产环境验证。
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
